@@ -42,6 +42,14 @@ ActiveRecord::Schema[7.0].define(version: 2024_11_18_180637) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "modifier_groups", force: :cascade do |t|
+    t.string "label"
+    t.integer "selection_required_min"
+    t.integer "selection_required_max"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "section_items", force: :cascade do |t|
     t.bigint "section_id", null: false
     t.bigint "item_id", null: false
