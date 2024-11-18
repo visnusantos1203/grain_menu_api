@@ -50,6 +50,18 @@ ActiveRecord::Schema[7.0].define(version: 2024_11_18_180637) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "modifiers", force: :cascade do |t|
+    t.bigint "item_id", null: false
+    t.bigint "modifier_groups_id", null: false
+    t.integer "display_order", default: 0
+    t.integer "default_quantity", default: 0
+    t.float "price_override"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["item_id"], name: "index_modifiers_on_item_id"
+    t.index ["modifier_groups_id"], name: "index_modifiers_on_modifier_groups_id"
+  end
+
   create_table "section_items", force: :cascade do |t|
     t.bigint "section_id", null: false
     t.bigint "item_id", null: false
