@@ -70,5 +70,15 @@ module Types
     def item(id:)
       Item.find(id)
     end
+
+    # MenuSection Entity
+    field :menu_sections, [Types::SectionType], null: true do
+      description "Retrieve sections for a specific menu"
+      argument :menu_id, ID, required: true
+    end
+
+    def menu_sections(menu_id:)
+      Menu.find(menu_id).sections
+    end
   end
 end
