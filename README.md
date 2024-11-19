@@ -11,4 +11,4 @@ A simple menu creation system built using Ruby on Rails 7 and GraphQL
 - Go to **/graphiql** endpoint and start exploring 🚀
 
 ## Live Demo
-https://grain-menu-api.onrender.com/graphql
+https://grain-menu-api.onrender.com/graphiql
