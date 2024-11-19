@@ -1,24 +1,11 @@
-# README
+# Welcome to Grain Menu API 👋
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A simple menu creation system built using Ruby on Rails 7 and GraphQL
 
-Things you may want to cover:
+## v.1.0 (API)
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Setup Guide
+- Clone the repository to your local machine and run **bundle install**
+- Initialize the database by running **rails db:create db:migrate db:seed**
+- Start the rails server (rails s) and rails console (rails c)
+- Go to **/graphiql** endpoint and start exploring 🚀
