@@ -53,5 +53,22 @@ module Types
     def section(id:)
       Section.find(id)
     end
+
+    # Item Entity
+    field :items, [Types::ItemType], null: true do
+      description "Retrieve all items"
+    end
+
+    def items
+      Item.all
+    end
+
+    field :item, Types::ItemType, null: true, description: "Retrieve item using id" do
+      argument :id, ID, required: true
+    end
+
+    def item(id:)
+      Item.find(id)
+    end
   end
 end
