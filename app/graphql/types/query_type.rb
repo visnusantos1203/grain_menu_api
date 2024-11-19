@@ -36,5 +36,22 @@ module Types
     def menu(id:)
       Menu.find(id)
     end
+
+    # Section Entity
+    field :sections, [Types::SectionType], null: true do
+      description "Retrieve all sections"
+    end
+
+    def sections
+      Section.all
+    end
+
+    field :section, Types::SectionType, null: true, description: "Retrieve section using id" do
+      argument :id, ID, required: true
+    end
+
+    def section(id:)
+      Section.find(id)
+    end
   end
 end
